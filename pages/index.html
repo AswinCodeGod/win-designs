@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>WIN Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header w/ Logo and Navbar -->
+    <header class="header" id="myHeader">
+        <div class="logo-div"></div> <!-- background-image: url("../images/logos/WINlogoShortNOText.svg"); -->
+        <nav>
+            <ul>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="parralax-img">
+        <div id="header-fade" class="page-header">
+            <h1>YOUR VISION</h1>
+        </div>
+    </div>
+    <div class="container body-text">
+        <h1>
+            PORTFOLIO
+        </h1>
+        <div class="portfolio-container">
+            <button class="button-36" role="button">Web</button>
+            <button class="button-36" role="button">Graphic</button>
+            <button class="button-36" role="button">CAD</button>
+        </div>
+        <h2>
+            OUR ABILITY
+        </h2>
+        <h1>
+            YOUR <i> IDEAS</i> REALISED
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deserunt aspernatur distinctio iusto, illum vel aliquid qui nemo incidunt inventore voluptatem temporibus nesciunt quam autem, dicta et, facere sequi. Illum!Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deserunt aspernatur distinctio iusto, illum vel aliquid qui nemo incidunt inventore voluptatem temporibus nesciunt quam autem, dicta et, facere sequi. Illum!
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deserunt aspernatur distinctio iusto, illum vel aliquid qui nemo incidunt inventore voluptatem temporibus nesciunt quam autem, dicta et, facere sequi. Illum!
+        </p>
+    </div>
+    <div class="container body-text">
+        <h1>
+            WE WORK FOR <i>YOU</i>.
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deserunt aspernatur distinctio iusto, illum vel aliquid qui nemo incidunt inventore voluptatem temporibus nesciunt quam autem, dicta et, facere sequi. Illum!Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deserunt aspernatur distinctio iusto, illum vel aliquid qui nemo incidunt inventore voluptatem temporibus nesciunt quam autem, dicta et, facere sequi. Illum!
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deserunt aspernatur distinctio iusto, illum vel aliquid qui nemo incidunt inventore voluptatem temporibus nesciunt quam autem, dicta et, facere sequi. Illum!
+        </p>
+    </div>
+
+    <!-- <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+
+        // Get the header
+        var header = document.getElementById("myHeader");
+
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script> -->
+    
+    <script>
+        var headerF = document.getElementById('header-fade');
+
+        function fadeOutOnScroll(element) {
+            if (!element) {
+                return;
+            }
+            
+            var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+            var elementHeight = element.offsetHeight;
+            var scrollTop = document.documentElement.scrollTop;
+            
+            var opacity = 1;
+            
+            if (scrollTop > distanceToTop) {
+                opacity = 1 - (1.9 * scrollTop - distanceToTop) / elementHeight;
+            }
+            
+            if (opacity >= 0) {
+                element.style.opacity = opacity;
+            }
+        }
+
+        function scrollHandler() {
+        fadeOutOnScroll(headerF);
+        }
+
+        window.addEventListener('scroll', scrollHandler);
+    </script>
+</body>
+</html>
