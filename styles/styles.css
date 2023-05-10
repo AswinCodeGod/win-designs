@@ -513,6 +513,17 @@ body {
   background-position: -120% 0;
 }
 
+@media only screen and (max-width: 700px) { 
+  .parralax-img {
+    height: 50vh;
+    margin-bottom: -150px;
+  }
+
+  .parralax-img h1 {
+    margin-top: 100px;
+  }
+}
+
 /* INDEX.HTML -> Body header and content*/
 
 .page-header {
