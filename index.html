@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/styles/styles.css" />
+        <title>WIN Design</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+            rel="stylesheet" />
+        <link rel = "icon" href = "images/logos/WINlogoShortNOText.svg" type = "image/x-icon">
+    </head>
+    <body>
+        <!-- Header w/ Logo and Navbar -->
+        <header class="header" id="myHeader">
+            <div class="logo-div"><a href="index.html"></a></div>
+            <!-- background-image: url("../images/logos/WINlogoShortNOText.svg"); -->
+            <nav>
+                <ul id="main-menu">
+                    <li><a href="pages/services.html">Services</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                    <li><a href="pages/aboutus.html">About Us</a></li>
+                </ul>
+
+                <!-- <div class="hamburger-container">
+                <input id="toggle" type="checkbox"></input>
+                <label for="toggle" class="hamburger">
+                    <div class="top-bun"></div>
+                    <div class="meat"></div>
+                    <div class="bottom-bun"></div>
+                </label>
+            </div> -->
+                <div id="menuToggle">
+                    <!--
+                A fake / hidden checkbox is used as click reciever,
+                so you can use the :checked selector on it.
+                -->
+                    <input type="checkbox" />
+
+                    <!--
+                Some spans to act as a hamburger.
+                
+                They are acting like a real hamburger,
+                not that McDonalds stuff.
+                -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <!--
+                Too bad the menu has to be inside of the button
+                but hey, it's pure CSS magic.
+                -->
+                    <ul id="menu">
+                        <a href="pages/services.html"><li>Services</li></a>
+                        <a href="pages/contact.html"><li>Contact</li></a>
+                        <a href="pages/aboutus.html"><li>About Us</li></a>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="parralax-img">
+            <div id="header-fade" class="page-header">
+                <h1>YOUR VISION</h1>
+            </div>
+        </div>
+        <div class="container body-text">
+            <h1>PORTFOLIO</h1>
+            <div class="portfolio-container">
+                <a href="/pages/webportfolio.html"
+                    ><button class="button-36" role="button">Web</button></a
+                >
+                <button class="button-36" style="opacity: 0.3" role="button">
+                    Graphic
+                </button>
+                <button class="button-36" style="opacity: 0.3" role="button">
+                    CAD
+                </button>
+            </div>
+            <h2>OUR ABILITY</h2>
+            <h1>YOUR <i> IDEAS</i> REALISED</h1>
+            <p>
+                Our team of skilled designers and developers have the ability to
+                turn your creative ideas into reality, bringing them to life on
+                the web and in print.<br /><br />
+                With our help, your ideas can be transformed into visually
+                stunning and highly functional websites and graphics that will
+                help your business stand out from the competition.<br /><br />
+                At our core, we believe that collaboration is key to achieving
+                success, and we work closely with our clients to ensure that
+                their ideas are fully realized and brought to life in ways that
+                exceed their expectations.
+            </p>
+        </div>
+        <div class="container body-text">
+            <h1>WE WORK FOR <i>YOU</i>.</h1>
+            <p>
+                As a client-centered design agency, we recognize that every
+                client is different. Therefore, we prioritise effective
+                communication to ensure we accurately realize your unique
+                vision.<br /><br />
+                We take the time to listen to your ideas, goals, and challenges,
+                tailoring our process to meet your specific needs. We encourage
+                open feedback to make any necessary adjustments and deliver
+                exceptional designs that help you achieve your business
+                objectives. Our goal is to work for you and make your project a
+                success.
+            </p>
+        </div>
+
+        <!-- <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};1
+
+        // Get the header
+        var header = document.getElementById("myHeader");
+
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script> -->
+
+        <footer>
+            <div class="container">
+                <h2>WINdesigns &#174;</h2>
+            </div>
+        </footer>
+
+        <script>
+            var headerF = document.getElementById("header-fade");
+
+            function fadeOutOnScroll(element) {
+                if (!element) {
+                    return;
+                }
+
+                var distanceToTop =
+                    window.pageYOffset + element.getBoundingClientRect().top;
+                var elementHeight = element.offsetHeight;
+                var scrollTop = document.documentElement.scrollTop;
+
+                var opacity = 1;
+
+                if (scrollTop > distanceToTop) {
+                    opacity =
+                        1 - (1.9 * scrollTop - distanceToTop) / elementHeight;
+                }
+
+                if (opacity >= 0) {
+                    element.style.opacity = opacity;
+                }
+            }
+
+            function scrollHandler() {
+                fadeOutOnScroll(headerF);
+            }
+
+            window.addEventListener("scroll", scrollHandler);
+        </script>
+    </body>
+</html>

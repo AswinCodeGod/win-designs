@@ -1,0 +1,247 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#background {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    background-image: url(../images/bg1.1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    justify-content: center;
+    animation: change 20s infinite ease-in-out;
+}
+
+@keyframes change {
+    0%
+    {
+        background-image: url(../images/bg1.1.png);
+    }
+    12.5%
+    {
+        background-image: url(../images/bg1.1.png);
+    }
+    25%
+    {
+        background-image: url(../images/bg2.png);
+    }
+    37.5%
+    {
+        background-image: url(../images/bg2.png);
+    }
+    50%
+    {
+        background-image: url(../images/bg3.png);
+    }
+    62.5%
+    {
+        background-image: url(../images/bg3.png);
+    }
+    75%
+    {
+        background-image: url(../images/bg4.png);
+    }
+    87.5%
+    {
+        background-image: url(../images/bg4.png);
+    }
+    100%
+    {
+        background-image: url(../images/bg1.1.png);
+    }
+}
+
+nav {
+    width: 94%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+nav .logo {
+    width: 80px;
+    margin: 30px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button {
+    padding: 15px 50px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    border-color: rgb(179, 177, 177);
+    color: rgb(179, 177, 177);
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown button {
+    border: none;
+    font-size: 25px;
+    padding: 0;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+
+.dropdown-menu ul {
+    list-style-type: none;
+    text-align: right;
+    padding: 0;
+}
+
+.dropdown-menu li {
+    margin: 50px 10px 20px 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 30px;
+    transition: 0.2s;
+}
+
+.dropdown-menu a:hover {
+    color: rgb(179, 177, 177);
+}
+
+.dropdown.active > .link + .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+.container {
+    width: 50%;
+    height: 100vh;
+    background: rgba(86,86,86,0.3);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.container2 {
+    width: 50%;
+    height: 100vh;
+    background: rgba(86,86,86,0.3);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+
+
+.container .info {
+    width: 550px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container2 .info {
+    width: 550px;
+    color: #fff;
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.info h1 {
+    font-size: 60px;
+    letter-spacing: 10px;
+}
+
+.info h2 {
+    font-size: 30px;
+    letter-spacing: 8px;
+    margin-left: 10px;
+}
+
+.info p {
+    color: #f0eef1;
+    font-size: 16px;
+    margin: 20px 0;
+    margin-left: 10px;
+}
+
+.info a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 30px;
+    transition: 0.2s;
+}
+
+.info a:hover {
+    color: green;
+}
+
+form {
+    margin: 30px 70px 20px 20px;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: white;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: green;
+    color: white;
+  }
