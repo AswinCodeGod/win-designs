@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background-color: black;
+}
 
 #background {
     width: 100%;
@@ -235,6 +238,30 @@ button:hover {
     color: white;
     margin-bottom: 30px;
     transition: 0.2s;
+}
+
+@media only screen and (max-width: 660px) {
+    .info h1 {
+        font-size: 45px;
+        letter-spacing: 10px;
+    }
+    .info h2 {
+        font-size: 35px;
+        letter-spacing: 8px;
+    }
+
+    .container2 .info {
+        top: 30%;
+        left: 0;
+        transform: translateX(-50%);
+    }
+
+    @media only screen and (max-width: 1120px) {
+        .container .info {
+            top: 40%;
+            transform: translateX(60%);
+        }
+    }
 }
 
 .info a:hover {
